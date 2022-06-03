@@ -7,9 +7,11 @@ data class Eventos (var data: String, var preco: Long, var localizacao: String, 
     fun toContentValues() : ContentValues {
         val valores = ContentValues()
 
-        //valores.put(TabelaBDEventos., titulo)
-        //valores.put(TabelaBDEventos.CAMPO_AUTOR, autor)
-        //valores.put(TabelaBDEventos.CAMPO_CATEGORIA_ID, idCategoria)
+        valores.put(TabelaBDEventos.DATA, data)
+        valores.put(TabelaBDEventos.PRECO, preco)
+        valores.put(TabelaBDEventos.LOCALIZACAO, localizacao)
+        valores.put(TabelaBDEventos.NOME, nome)
+        valores.put(TabelaBDEventos.ID_ENTRETENIMENTO, id_entretenimento)
 
         return valores
     }

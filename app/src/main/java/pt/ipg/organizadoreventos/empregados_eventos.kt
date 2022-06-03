@@ -4,12 +4,12 @@ import android.content.ContentValues
 
 data class empregados_eventos (var id_empregados: Long, var id_eventos: Long){
 
-    fun toContentValues() : ContentValues{
-        val valores = toContentValues()
+    fun toContentValues() : ContentValues {
+        val valores = ContentValues()
 
-        //valores.put(TabelaBDEmpregados_eventos.nome)
+        valores.put(TabelaBDEmpregados_eventos.ID_EMPREGADOS, id_empregados)
+        valores.put(TabelaBDEmpregados_eventos.ID_EVENTOS, id_eventos)
+
         return valores
     }
-
-
 }
