@@ -213,18 +213,44 @@ class ContentProviderEventos : ContentProvider() {
     companion object {
         const val AUTHORITY = "pt.ipg.organizadoreventos"
 
-        const val URI_CATEGORIAS = 100
-        const val URI_CATEGORIA_ESPECIFICA = 101
-        const val URI_LIVROS = 200
-        const val URI_LIVRO_ESPECIFICO = 201
+        const val URI_Convidados = 100
+        const val URI_Convidados_ESPECIFICA = 101
+
+        const val URI_Convidados_Eventos = 200
+        const val URI_Convidados_Eventos_ESPECIFICA = 201
+
+        const val URI_Empregados = 300
+        const val URI_Empregados_ESPECIFICA = 301
+
+        const val URI_Empregados_eventos = 400
+        const val URI_Empregados_Eventos_ESPECIFICA = 401
+
+        const val URI_Entretenimento = 500
+        const val URI_Entretenimento_ESPECIFICA = 501
+
+        const val URI_Eventos = 600
+        const val URI_Eventos_ESPECIFICA = 601
 
         fun getUriMatcher() : UriMatcher {
             var uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
 
-            uriMatcher.addURI(AUTHORITY, TabelaBDConvidados.NOME, URI_CATEGORIAS)
-            uriMatcher.addURI(AUTHORITY, "${TabelaBDEmpregados.NOME}/#", URI_CATEGORIA_ESPECIFICA)
-            uriMatcher.addURI(AUTHORITY, TabelaBDLivros.NOME, URI_LIVROS)
-            uriMatcher.addURI(AUTHORITY, "${TabelaBDLivros.NOME}/#", URI_LIVRO_ESPECIFICO)
+            uriMatcher.addURI(AUTHORITY, TabelaBDConvidados.NOMETABELA, URI_Convidados)
+            uriMatcher.addURI(AUTHORITY, "${TabelaBDConvidados.NOMETABELA}/#", URI_Convidados_ESPECIFICA)
+
+            uriMatcher.addURI(AUTHORITY, TabelaBDConvidados_eventos.NOMETABELA, URI_Convidados_Eventos)
+            uriMatcher.addURI(AUTHORITY, "${TabelaBDConvidados_eventos.NOMETABELA}/#", URI_Convidados_Eventos_ESPECIFICA)
+
+            uriMatcher.addURI(AUTHORITY, TabelaBDEmpregados.NOMETABELA, URI_Empregados)
+            uriMatcher.addURI(AUTHORITY, "${TabelaBDEmpregados.NOMETABELA}/#", URI_Empregados_ESPECIFICA)
+
+            uriMatcher.addURI(AUTHORITY, TabelaBDEmpregados_eventos.NOMETABELA, URI_Empregados_eventos)
+            uriMatcher.addURI(AUTHORITY, "${TabelaBDEmpregados_eventos.NOMETABELA}/#", URI_Empregados_Eventos_ESPECIFICA)
+
+            uriMatcher.addURI(AUTHORITY, TabelaBDEntretenimento.NOMETABELA, URI_Entretenimento)
+            uriMatcher.addURI(AUTHORITY, "${TabelaBDEntretenimento.NOMETABELA}/#", URI_Entretenimento_ESPECIFICA)
+
+            uriMatcher.addURI(AUTHORITY, TabelaBDEventos.NOMETABELA, URI_Eventos)
+            uriMatcher.addURI(AUTHORITY, "${TabelaBDEventos.NOMETABELA}/#", URI_Eventos_ESPECIFICA)
 
             return uriMatcher
         }
