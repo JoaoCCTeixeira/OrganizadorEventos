@@ -2,7 +2,7 @@ package pt.ipg.organizadoreventos
 
 import android.content.ContentValues
 
-class convidados_eventos (var id_convidados: Long, var id_eventos: Long){
+class convidados_eventos (var id_convidados: Long, var id_eventos: Long, var id: Long = -1){
 
     fun toContentValues() : ContentValues {
         val valores = ContentValues()
