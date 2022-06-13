@@ -2,7 +2,7 @@ package pt.ipg.organizadoreventos
 
 import android.content.ContentValues
 
-class Empregados (var nome: String, var numero: String, var gmail: String, var cc: String){
+class Empregados (var nome: String, var numero: String, var gmail: String, var cc: String, var id: Long = -1){
 
     fun toContentValues() : ContentValues {
         val valores = ContentValues()
