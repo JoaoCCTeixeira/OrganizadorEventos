@@ -1,6 +1,8 @@
 package pt.ipg.organizadoreventos
 
 import android.content.ContentValues
+import android.database.Cursor
+import android.provider.BaseColumns
 
 data class Eventos (var data: String, var preco: Long, var localizacao: String, var nome: String, var id_entretenimento: Long, var id: Long = -1){
 
@@ -14,5 +16,27 @@ data class Eventos (var data: String, var preco: Long, var localizacao: String, 
         valores.put(TabelaBDEventos.ID_ENTRETENIMENTO, id_entretenimento)
 
         return valores
+    }
+
+    companion object {
+        fun fromCursor(cursor: Cursor): Eventos {
+            val posId = cursor.getColumnIndex(BaseColumns._ID)
+
+            val posData = cursor.getColumnIndex(TabelaBDEventos.DATA)
+            val posPreco = cursor.getColumnIndex(TabelaBDEventos.PRECO)
+            val posLocalizacao = cursor.getColumnIndex(TabelaBDEventos.LOCALIZACAO)
+            val posNome = cursor.getColumnIndex(TabelaBDEventos.NOME)
+            val posIdEntretenimento = cursor.getColumnIndex(TabelaBDEventos.ID_ENTRETENIMENTO)
+
+            val id = cursor.getLong(posId)
+
+            val data = cursor.getString(posData)
+            val preco = cursor.getLong(posPreco)
+            val localizacao = cursor.getString(posLocalizacao)
+            val nome = cursor.getString(posNome)
+            val idEntretenimento = cursor.getLong(posIdEntretenimento)
+
+            return Eventos( data, preco, localizacao,nome, idEntretenimento, id)
+        }
     }
 }
