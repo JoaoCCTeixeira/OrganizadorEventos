@@ -19,6 +19,7 @@ class Convidados (var nome: String, var numero: String, var cc: String, var id: 
     companion object {
         fun fromCursor(cursor: Cursor): Convidados {
             val posId = cursor.getColumnIndex(BaseColumns._ID)
+
             val posNome = cursor.getColumnIndex(TabelaBDConvidados.NOME)
             val posNumero = cursor.getColumnIndex(TabelaBDConvidados.NUMERO)
             val posCC = cursor.getColumnIndex(TabelaBDConvidados.CC)
@@ -30,4 +31,5 @@ class Convidados (var nome: String, var numero: String, var cc: String, var id: 
 
             return Convidados(nome, numero, cc, id)
         }
+    }
 }
