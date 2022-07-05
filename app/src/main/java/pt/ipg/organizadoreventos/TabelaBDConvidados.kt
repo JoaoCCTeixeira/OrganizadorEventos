@@ -1,6 +1,7 @@
 package pt.ipg.organizadoreventos
 
 import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteQueryBuilder
 import android.provider.BaseColumns
 
 class TabelaBDConvidados (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA){
@@ -9,7 +10,8 @@ class TabelaBDConvidados (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA){
         db.execSQL("CREATE TABLE $nome (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "$NOME TEXT NOT NULL, " +
                 "$NUMERO INTEGER NOT NULL, " +
-                "$CC INTEGER NOT NULL)")
+                "$CC INTEGER NOT NULL) ")
+
 
     }
 
@@ -18,6 +20,9 @@ class TabelaBDConvidados (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA){
         const val NUMERO = "numero"
         const val CC = "cc"
         const val NOMETABELA = "Convidados"
+        const val ID_CONVIDADOS = "id_convidados"
     }
+
+
 
 }

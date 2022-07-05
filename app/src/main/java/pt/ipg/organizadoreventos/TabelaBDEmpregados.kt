@@ -20,6 +20,7 @@ class TabelaBDEmpregados (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA){
         const val GMAIL = "gmail"
         const val CC = "cc"
         const val NOMETABELA = "Empregados"
+        const val ID_EMPREGADOS = "id_empregados"
     }
 
 }
