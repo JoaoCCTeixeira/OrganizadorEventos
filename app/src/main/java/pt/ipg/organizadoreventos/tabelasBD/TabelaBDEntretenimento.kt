@@ -1,4 +1,4 @@
-package pt.ipg.organizadoreventos
+package pt.ipg.organizadoreventos.tabelasBD
 
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns
@@ -13,7 +13,7 @@ class TabelaBDEntretenimento (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA){
 
     companion object {
         const val TEMA = "tema"
-        const val NOMETABELA = "Entretenimento"
+        const val NOMETABELA = "entretenimento"
         const val ID_ENTRETENIMENTO = "id_entretenimento"
     }
 

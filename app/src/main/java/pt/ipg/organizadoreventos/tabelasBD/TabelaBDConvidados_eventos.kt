@@ -1,4 +1,4 @@
-package pt.ipg.organizadoreventos
+package pt.ipg.organizadoreventos.tabelasBD
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
@@ -20,13 +20,7 @@ class TabelaBDConvidados_eventos (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA)
 
     }
 
-    companion object {
-        const val NOMETABELA = "convidados_eventos"
-        const val ID_CONVIDADOS = "id_convidados"
-        const val ID_EVENTOS = "id_eventos"
-    }
-
-    override fun query(
+   override fun query(
         columns: Array<String>,
         selection: String?,
         selectionArgs: Array<String>?,
@@ -46,4 +40,9 @@ class TabelaBDConvidados_eventos (db: SQLiteDatabase) : TabelaBD(db, NOMETABELA)
         return queryBuilder.query(db, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
 
+    companion object {
+        const val NOMETABELA = "convidados_eventos"
+        const val ID_CONVIDADOS = "id_convidados"
+        const val ID_EVENTOS = "id_eventos"
+    }
 }

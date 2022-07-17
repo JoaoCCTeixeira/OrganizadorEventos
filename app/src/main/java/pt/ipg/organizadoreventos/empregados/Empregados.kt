@@ -1,8 +1,9 @@
-package pt.ipg.organizadoreventos
+package pt.ipg.organizadoreventos.empregados
 
 import android.content.ContentValues
 import android.database.Cursor
 import android.provider.BaseColumns
+import pt.ipg.organizadoreventos.tabelasBD.TabelaBDEmpregados
 
 class Empregados (var nome: String, var numero: String, var gmail: String, var cc: String, var id: Long = -1){
 

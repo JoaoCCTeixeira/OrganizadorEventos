@@ -1,4 +1,4 @@
-package pt.ipg.organizadoreventos
+package pt.ipg.organizadoreventos.tabelasBD
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
@@ -14,7 +14,7 @@ abstract class TabelaBD(val db: SQLiteDatabase, val nome: String){
 
     fun delete(whereClause: String, whereArgs: Array<String>) = db.delete(nome, whereClause, whereArgs)
 
-    open fun query(columns: Array<String>, selection: String, selectionArgs: Array<String>, groupBy: String, having: String, orderBy: String) =
+    open fun query(columns: Array<String>, selection: String?, selectionArgs: Array<String>?, groupBy: String?, having: String?, orderBy: String?) =
         db.query(nome, columns, selection, selectionArgs, groupBy, having, orderBy)
 
 

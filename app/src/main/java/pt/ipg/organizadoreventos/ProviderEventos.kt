@@ -4,8 +4,8 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.content.UriMatcher
 import android.database.Cursor
-import android.database.sqlite.SQLiteOpenHelper
 import android.net.Uri
+import pt.ipg.organizadoreventos.tabelasBD.*
 
 class ContentProviderEventos : ContentProvider() {
     var db : BDEventosOpenHelper? = null

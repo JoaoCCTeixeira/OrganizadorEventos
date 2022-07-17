@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuPrincipal">
+
+    <fragment
+        android:id="@+id/menuPrincipal"
+        android:name="pt.ipg.organizadoreventos.MenuPrincipal"
+        android:label="fragment_menu_principal"
+        tools:layout="@layout/fragment_menu_principal" >
+        <action
+            android:id="@+id/action_menuPrincipal_to_listarConvidados"
+            app:destination="@id/listarConvidados" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_listarEmpregados"
+            app:destination="@id/listarEmpregados" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_listarEventos"
+            app:destination="@id/listarEventos" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_listarEntretenimento"
+            app:destination="@id/listarEntretenimento" />
+    </fragment>
+    <fragment
+        android:id="@+id/listarConvidados"
+        android:name="pt.ipg.organizadoreventos.convidados.ListarConvidados"
+        android:label="fragment_listar_convidados"
+        tools:layout="@layout/fragment_listar_convidados" >
+        <action
+            android:id="@+id/action_listarConvidados_to_editarConvidado"
+            app:destination="@id/editarConvidado" />
+        <action
+            android:id="@+id/action_listarConvidados_to_eliminarConvidado"
+            app:destination="@id/eliminarConvidado" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarConvidado"
+        android:name="pt.ipg.organizadoreventos.convidados.EditarConvidado"
+        android:label="fragment_editar_convidado"
+        tools:layout="@layout/fragment_editar_convidado" />
+    <fragment
+        android:id="@+id/eliminarConvidado"
+        android:name="pt.ipg.organizadoreventos.convidados.EliminarConvidado"
+        android:label="fragment_eliminar_convidado"
+        tools:layout="@layout/fragment_eliminar_convidado" />
+    <fragment
+        android:id="@+id/listarEmpregados"
+        android:name="pt.ipg.organizadoreventos.empregados.ListarEmpregados"
+        android:label="fragment_listar_empregados"
+        tools:layout="@layout/fragment_listar_empregados" >
+        <action
+            android:id="@+id/action_listarEmpregados_to_editarEmpregado"
+            app:destination="@id/editarEmpregado" />
+        <action
+            android:id="@+id/action_listarEmpregados_to_eliminarEmpregado"
+            app:destination="@id/eliminarEmpregado" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarEmpregado"
+        android:name="pt.ipg.organizadoreventos.empregados.EditarEmpregado"
+        android:label="fragment_editar_empregado"
+        tools:layout="@layout/fragment_editar_empregado" />
+    <fragment
+        android:id="@+id/eliminarEmpregado"
+        android:name="pt.ipg.organizadoreventos.empregados.EliminarEmpregado"
+        android:label="fragment_eliminar_empregado"
+        tools:layout="@layout/fragment_eliminar_empregado" />
+    <fragment
+        android:id="@+id/listarEventos"
+        android:name="pt.ipg.organizadoreventos.eventos.ListarEventos"
+        android:label="fragment_listar_eventos"
+        tools:layout="@layout/fragment_listar_eventos" >
+        <action
+            android:id="@+id/action_listarEventos_to_editarEvento"
+            app:destination="@id/editarEvento" />
+        <action
+            android:id="@+id/action_listarEventos_to_eliminarEvento"
+            app:destination="@id/eliminarEvento" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarEvento"
+        android:name="pt.ipg.organizadoreventos.eventos.EditarEvento"
+        android:label="fragment_editar_evento"
+        tools:layout="@layout/fragment_editar_evento" />
+    <fragment
+        android:id="@+id/eliminarEvento"
+        android:name="pt.ipg.organizadoreventos.eventos.EliminarEvento"
+        android:label="fragment_eliminar_evento"
+        tools:layout="@layout/fragment_eliminar_evento" />
+    <fragment
+        android:id="@+id/listarEntretenimento"
+        android:name="pt.ipg.organizadoreventos.entretenimento.ListarEntretenimento"
+        android:label="fragment_listar_entretenimento"
+        tools:layout="@layout/fragment_listar_entretenimento" >
+        <action
+            android:id="@+id/action_listarEntretenimento_to_editarEntretenimento"
+            app:destination="@id/editarEntretenimento" />
+        <action
+            android:id="@+id/action_listarEntretenimento_to_eliminarEntretenimento"
+            app:destination="@id/eliminarEntretenimento" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarEntretenimento"
+        android:name="pt.ipg.organizadoreventos.entretenimento.EditarEntretenimento"
+        android:label="fragment_editar_entretenimento"
+        tools:layout="@layout/fragment_editar_entretenimento" />
+    <fragment
+        android:id="@+id/eliminarEntretenimento"
+        android:name="pt.ipg.organizadoreventos.entretenimento.EliminarEntretenimento"
+        android:label="fragment_eliminar_entretenimento"
+        tools:layout="@layout/fragment_eliminar_entretenimento" />
+</navigation>

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">OrganizadorEventos</string>
+    <string name="convidadosMenuPrincipalButton">Convidados</string>
+    <string name="empregadosMenuPrincipalButton">Empregados</string>
+    <string name="eventosMenuPrincipalButton">Eventos</string>
+    <string name="entretenimentoMenuPrincipalButton">Entretenimento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Inserir_Convidado">Inserir convidado</string>
+    <string name="Alterar_Convidado">Alterar convidado</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="alterar">Alterar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="inserir">Inserir</string>
 </resources>

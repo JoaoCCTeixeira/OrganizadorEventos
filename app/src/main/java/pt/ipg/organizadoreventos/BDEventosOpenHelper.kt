@@ -3,6 +3,7 @@ package pt.ipg.organizadoreventos
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import pt.ipg.organizadoreventos.tabelasBD.*
 
 class BDEventosOpenHelper (context: Context?) : SQLiteOpenHelper(context, NOME, null, VERSAO) {
 

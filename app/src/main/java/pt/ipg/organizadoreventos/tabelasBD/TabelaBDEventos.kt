@@ -1,4 +1,4 @@
-package pt.ipg.organizadoreventos
+package pt.ipg.organizadoreventos.tabelasBD
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase

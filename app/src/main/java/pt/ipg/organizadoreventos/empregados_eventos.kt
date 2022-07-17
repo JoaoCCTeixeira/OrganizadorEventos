@@ -3,6 +3,7 @@ package pt.ipg.organizadoreventos
 import android.content.ContentValues
 import android.database.Cursor
 import android.provider.BaseColumns
+import pt.ipg.organizadoreventos.tabelasBD.TabelaBDEmpregados_eventos
 
 data class empregados_eventos (var id_empregados: Long, var id_eventos: Long, var id: Long = -1){
 

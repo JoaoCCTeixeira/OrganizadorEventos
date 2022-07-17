@@ -1,8 +1,9 @@
-package pt.ipg.organizadoreventos
+package pt.ipg.organizadoreventos.entretenimento
 
 import android.content.ContentValues
 import android.database.Cursor
 import android.provider.BaseColumns
+import pt.ipg.organizadoreventos.tabelasBD.TabelaBDEntretenimento
 
 class Entretenimento (var tema: String, var id: Long = -1){
 
