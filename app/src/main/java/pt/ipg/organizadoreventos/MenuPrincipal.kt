@@ -37,9 +37,6 @@ class MenuPrincipal : Fragment() {
             findNavController().navigate(R.id.action_menuPrincipal_to_listarEmpregados)
         }
 
-        binding.buttonEventosMenu.setOnClickListener {
-            findNavController().navigate(R.id.action_menuPrincipal_to_listarEventos)
-        }
 
         binding.buttonEntretenimentoMenu.setOnClickListener {
             findNavController().navigate(R.id.action_menuPrincipal_to_listarEntretenimento)

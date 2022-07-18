@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/menuPrincipal">
+    app:startDestination="@id/menuInicial">
 
     <fragment
         android:id="@+id/menuPrincipal"
@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_menuPrincipal_to_listarEmpregados"
             app:destination="@id/listarEmpregados" />
-        <action
-            android:id="@+id/action_menuPrincipal_to_listarEventos"
-            app:destination="@id/listarEventos" />
         <action
             android:id="@+id/action_menuPrincipal_to_listarEntretenimento"
             app:destination="@id/listarEntretenimento" />
@@ -83,7 +80,11 @@
         android:id="@+id/editarEvento"
         android:name="pt.ipg.organizadoreventos.eventos.EditarEvento"
         android:label="fragment_editar_evento"
-        tools:layout="@layout/fragment_editar_evento" />
+        tools:layout="@layout/fragment_editar_evento" >
+        <action
+            android:id="@+id/action_editarEvento_to_menuPrincipal"
+            app:destination="@id/menuPrincipal" />
+    </fragment>
     <fragment
         android:id="@+id/eliminarEvento"
         android:name="pt.ipg.organizadoreventos.eventos.EliminarEvento"
@@ -111,4 +112,16 @@
         android:name="pt.ipg.organizadoreventos.entretenimento.EliminarEntretenimento"
         android:label="fragment_eliminar_entretenimento"
         tools:layout="@layout/fragment_eliminar_entretenimento" />
+    <fragment
+        android:id="@+id/menuInicial"
+        android:name="pt.ipg.organizadoreventos.MenuInicial"
+        android:label="fragment_menu_inicial"
+        tools:layout="@layout/fragment_menu_inicial" >
+        <action
+            android:id="@+id/action_menuInicial_to_menuPrincipal"
+            app:destination="@id/menuPrincipal" />
+        <action
+            android:id="@+id/action_menuInicial_to_listarEventos"
+            app:destination="@id/listarEventos" />
+    </fragment>
 </navigation>

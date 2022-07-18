@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.text.isDigitsOnly
 import androidx.core.view.get
+import androidx.navigation.fragment.findNavController
 import pt.ipg.organizadoreventos.R
 import pt.ipg.organizadoreventos.databinding.FragmentEditarConvidadoBinding
 import pt.ipg.organizadoreventos.databinding.FragmentEditarEmpregadoBinding
@@ -30,8 +31,11 @@ class EditarEvento : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonAdicionarEvento.setOnClickListener{
-            var notBlanck = false
-            var digitsOnly = false
+            var verificar1 = false
+            var verificar2 = false
+            var verificar3 = false
+            var verificar4 = false
+            var verificar5 = false
 
             var dia = binding.buttonData.dayOfMonth
             var mes = binding.buttonData.month
@@ -41,25 +45,49 @@ class EditarEvento : Fragment() {
             if (binding.editTextTextPrecoEvento.text.toString().isBlank()){
                 binding.editTextTextPrecoEvento.error = "Preencha o campo com o preco do evento"
                 binding.editTextTextPrecoEvento.requestFocus()
+                verificar1 = false
+            }else{
+                verificar1 = true
             }
+
+
             if (binding.editTextTextPrecoEvento.text.toString().isDigitsOnly()){
                 binding.editTextTextPrecoEvento.error = "Preencha o campo com o preco do evento"
                 binding.editTextTextPrecoEvento.requestFocus()
-            }
+                verificar2 = false
+            }else{
+            verificar2 = true
+        }
 
             if (binding.editTextTextLocalizacaoEvento.text.toString().isBlank()){
                 binding.editTextTextLocalizacaoEvento.error = "Preencha o campo com a localização do evento"
                 binding.editTextTextLocalizacaoEvento.requestFocus()
+                verificar3 = false
+            }else{
+                verificar3 = true
             }
 
             if (binding.editTextTextNomeEvento.text.toString().isBlank()){
                 binding.editTextTextNomeEvento.error = "Preencha o campo com o nome do evento"
                 binding.editTextTextNomeEvento.requestFocus()
+                verificar4 = false
+            }else{
+                verificar4 = true
             }
-            if (!binding.editTextTextNomeEvento.text.toString().isDigitsOnly()){
+            if (binding.editTextTextNomeEvento.text.toString().isDigitsOnly()){
                 binding.editTextTextNomeEvento.error = "Preencha o campo com o nome do evento"
                 binding.editTextTextNomeEvento.requestFocus()
+                verificar5 = false
+            }else{
+                verificar5 = true
             }
+
+            if(verificar1 && verificar2 && verificar3 && verificar4 && verificar5){
+                binding.buttonAdicionarEvento.setOnClickListener{
+                    findNavController().navigate(R.id.action_editarEvento_to_menuPrincipal)
+                }
+            }
+
         }
 
     }
